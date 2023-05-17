@@ -1,18 +1,18 @@
 import logo from "../../Assets/Logo/BrainFlix-logo.svg";
-import Button from "../Button/Button";
-import uploadIcon from "../../Assets/Icons/upload.svg"
-import ProfileImage from "../ProfileImage/ProfileImage";
 import img from "../../Assets/Images/Mohan-muruge.jpg"
 
+import './header.scss';
 const Header = () => {
   return (
     <nav className = "nav-bar">
       <img className = "nav-bar__logo" src ={logo} alt = "Logo"/>
-      <div>
-      <input className = "nav-bar__search-field" />
-      <ProfileImage  imgSrc={img}/>
-      <Button className = "nav-bar__button" description="UPLOAD" iconDescritpion="Upload Icon" icon={uploadIcon} />
-      </div>
+      <form className = "nav-bar__form-field">
+      <input placeholder="Search" className = "nav-bar__search-bar"/>
+      <img className ="nav-bar__profile-img" alt ="proflie " src={img}/>
+      <button className="nav-bar__button">
+        {"upload".toUpperCase()}
+    </button>
+      </form>
     </nav>
   )
 }

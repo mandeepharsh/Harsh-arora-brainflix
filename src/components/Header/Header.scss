@@ -1,0 +1,94 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 1rem 1rem ;
+    gap: 1rem;
+
+    @include tablet{
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 2.25rem 1.5rem 1.5rem;
+    }
+     
+    @include desktop{
+        width: 63.75rem;
+        margin: 0 auto;
+        padding: 2.25rem 1.5rem 1.5rem;
+    }
+   
+    
+    &__logo{
+        height: 1.5625rem;
+        width: 7.5rem;
+     
+    }
+   
+    &__form-field{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        
+        @include tablet{
+           width: auto;
+           gap: 2rem;
+        }
+              
+        
+    }
+
+    &__search-bar{
+     background-image: url(../../Assets/Icons/search.svg);
+     background-repeat: no-repeat;
+     width: 76%;
+     padding: .75rem ;
+     border: .0625rem solid $dividerLineColor;
+     border-radius: .25rem;
+     background-position: left;
+     background-origin: content-box;
+     
+     &::placeholder{
+      padding-left: 1.5rem;
+     }
+     @include tablet{
+        width: 14rem;
+    
+    }
+    }
+    &__profile-img{
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
+        object-fit: cover;
+
+        @include tablet{
+            order: 1;
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+    }
+
+    &__button{
+        width: 100%;
+        background-color: $PrimaryCtaColor;
+        background-image: url(../../Assets/Icons/upload.svg);
+        background-repeat: no-repeat;
+        border: none;
+        margin : 1rem 0;
+        padding: 1rem ;
+        color: $white;
+        background-position: left;
+        background-origin: content-box;
+        border-radius: .25rem;
+
+        @include tablet{
+            width: 9.375rem;
+            margin: 0;
+            height: 2.5rem;
+            padding: .3125rem;
+        }
+    }
+}
