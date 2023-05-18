@@ -1,7 +1,7 @@
 import logo from "../../Assets/Logo/BrainFlix-logo.svg";
 import img from "../../Assets/Images/Mohan-muruge.jpg"
 
-import './header.scss';
+import './Header.scss';
 const Header = () => {
   return (
     <nav className = "nav-bar">

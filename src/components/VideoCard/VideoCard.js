@@ -1,8 +1,10 @@
 import "./VideoCard.scss";
 
-const VideoCard = ({image,title,channel}) => {
+
+
+const VideoCard = ({image,title,channel,id}) => {
   return (
-    <div className="video-card">
+    <div onClick={(event) => console.log(id)} className="video-card">
       <img className="video-card__thumbnail" alt={title} src={image}/>
       <div className="video-card__description">
       <h3 className="video-card__title">{title}</h3>
