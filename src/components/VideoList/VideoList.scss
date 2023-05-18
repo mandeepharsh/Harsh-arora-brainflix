@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+.video-list{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 28rem;
+    
+    @include tablet{
+      width: 28rem;
+      gap: 2rem;
+      margin: 2.25rem 1.5rem 1.5rem;
+    }
+     
+    &__title{
+        color: $SecondaryTextColor;
+    }
+}

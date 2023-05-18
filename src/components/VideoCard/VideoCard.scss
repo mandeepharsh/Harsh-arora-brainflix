@@ -1,0 +1,25 @@
+.video-card{
+    display: flex;
+    gap: 1rem;
+
+
+
+    &__thumbnail{
+        width: 9rem;
+        height: 6rem;
+        flex: none;
+        border-radius: .25rem;
+    }
+
+    &__description{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: .3125rem 0;
+    }
+
+    &__title{
+        margin: 0;
+    }
+    
+}
