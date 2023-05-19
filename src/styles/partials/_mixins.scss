@@ -13,3 +13,25 @@
         @content;
     }
 }
+
+// 
+
+@mixin flex-layout($flex,$flexDirection,$justifyContent){
+    display : $flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+}
+
+@mixin desktop-layout{
+    margin: 0 auto;
+    width: 63.75rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+@mixin fontStyling($fontSize, $lineHeight , $fontWeight ){
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}

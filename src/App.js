@@ -4,32 +4,42 @@ import './App.scss';
 
 // Components
 import Header from './components/Header/Header';
-
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import Comments from './components/Comments/Comments';
 import VideoList from './components/VideoList/VideoList';
 
 // Importing Json Files
-import videos from "./data/video.json"
-import videoDetails from "./data/video-details.json"
-import HeroVideo from './components/HeroVideo/HeroVideo';
-import Comments from './components/Comments/Comments';
+import videos from "./data/video.json";
+import videoDetails from "./data/video-details.json";
+
 
 
 
 function App() {
   
   const [selectedVideo , setSelectedVideo ] = useState(videoDetails[0])
-  
- const filteredVideos = videos.filter((video) => 
+    
+  const chnageSelctedVideo = (id)  => {
+   const newSelection =   videoDetails.find((video) =>
+       video.id === id 
+     )
+    setSelectedVideo(newSelection)
+  } 
+
+  // Filter the array to remove the video which has been selected
+  const filteredVideos = videos.filter((video) => 
       video.id !== selectedVideo.id
- )
+  )
 
   return (
-    <div className="App">
+    <>
     <Header/>
-    <HeroVideo selectedVideo = {selectedVideo}/>
+    <VideoPlayer selectedVideo = {selectedVideo}/>
     <Comments selectedVideo = {selectedVideo}/>
-    <VideoList  videos ={filteredVideos}/>
-    </div>
+    <VideoList  videos ={filteredVideos}
+                chnageSelctedVideo = {chnageSelctedVideo}
+    />
+    </>
   );
 }
 

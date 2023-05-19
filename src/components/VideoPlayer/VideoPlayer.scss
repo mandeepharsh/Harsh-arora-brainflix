@@ -1,0 +1,25 @@
+@use  "../../styles/partials/mixins" as * ;
+@use "../../styles/partials/variables" as *;
+
+.hero{
+    
+    
+    background-color: $VideoComponenetColor;
+
+   
+
+    &__videoPlayer{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        
+        @include tablet{
+            width: 90%;
+        }
+
+        @include desktop{
+            width: 63.75rem;
+
+        }
+    }
+}
