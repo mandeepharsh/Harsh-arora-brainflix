@@ -36,6 +36,29 @@
     font-weight: $fontWeight;
 }
 
+
 @mixin dividerLine{
     border-bottom: 0.0625rem solid $dividerLineColor;;
+}
+
+@mixin button($imgSrc){
+    width: 100%;
+    text-transform: uppercase;
+    background-color: $PrimaryCtaColor;
+    background-image: $imgSrc;
+    background-repeat: no-repeat;
+    border: none;
+    margin : 1rem 0;
+    padding: 1rem ;
+    color: $white;
+    background-position: left;
+    background-origin: content-box;
+    border-radius: .25rem;
+
+    @include tablet{
+        width: 9.375rem;
+        margin: 0;
+        height: 2.5rem;
+        padding: .3125rem;
+    }
 }
