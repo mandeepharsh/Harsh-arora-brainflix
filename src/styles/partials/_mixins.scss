@@ -35,3 +35,7 @@
     line-height: $lineHeight;
     font-weight: $fontWeight;
 }
+
+@mixin dividerLine{
+    border-bottom: 0.0625rem solid $dividerLineColor;;
+}

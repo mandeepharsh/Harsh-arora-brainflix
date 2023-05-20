@@ -30,6 +30,7 @@ function App() {
   const filteredVideos = videos.filter((video) => 
       video.id !== selectedVideo.id
   )
+  console.log(selectedVideo)
 
   return (
     <>

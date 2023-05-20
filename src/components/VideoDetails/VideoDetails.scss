@@ -1,0 +1,55 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.videoDetails{
+   
+   &__title{
+    padding-bottom: 1rem;
+    @include dividerLine;
+     @include tablet{
+        border: none;
+     }
+     @include desktop{
+        padding-top: 1.5rem;
+     }
+   }
+   
+   &__stats{
+     display: flex;
+     justify-content: space-between;
+     @include dividerLine;
+     padding: 1rem 0;
+   }
+   
+   &__sub-stats{
+    margin-right: 7rem;
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 1rem;
+    color: $secondaryTextColor;
+      @include tablet{
+        flex-direction: row;
+        margin: 0;
+      }
+   }
+   
+
+
+   &__tag{
+     display: flex;
+     gap: 0.7rem;
+
+     &--featured{
+        color: $primaryTextColor;
+        font-weight: 700;
+     }
+   }
+
+   &__description{
+    padding: 1.2rem 0 2rem ;
+    font-size: 1.2rem;
+   }
+
+
+}

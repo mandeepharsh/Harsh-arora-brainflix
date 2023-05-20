@@ -3,6 +3,10 @@
 
 .reviews{
   margin: 1rem;
+
+  @include tablet{
+    margin: 2rem
+  }
   @include desktop {
     @include desktop-layout;
   }
