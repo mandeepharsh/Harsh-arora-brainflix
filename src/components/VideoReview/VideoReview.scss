@@ -4,35 +4,27 @@
 .reviews{
   margin: 1rem;
 
+
   @include tablet{
     margin: 2rem
   }
-  @include desktop {
-    @include desktop-layout;
+  @include desktop{
+    margin: 0;
+    border-right: 1px solid $dividerLineColor;
   }
+  
   &__count{
     @include fontStyling(1.2rem,1.4rem,700)
   }
 
-  
-
-
-
     &__comments{
-     
-       @include tablet {
-         padding: 0 2.25rem 2.5rem;
-         
-       }
-     
-      
-     
+
         &__cards {
          @include tablet {
            width: 80%;
            margin: 0 auto;
          }
-     
+
          @include desktop {
            width: 55%;
          }

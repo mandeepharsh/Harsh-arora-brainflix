@@ -19,6 +19,10 @@
      justify-content: space-between;
      @include dividerLine;
      padding: 1rem 0;
+
+     @include desktop{
+      padding:1rem 2rem 1rem 0 ;
+     }
    }
    
    &__sub-stats{
@@ -49,6 +53,9 @@
    &__description{
     padding: 1.2rem 0 2rem ;
     font-size: 1.2rem;
+    @include desktop{
+      padding: 1.2rem 2rem 2rem 0 ;
+    }
    }
 
 

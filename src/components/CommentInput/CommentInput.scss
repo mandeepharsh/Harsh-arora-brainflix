@@ -6,7 +6,10 @@
     gap: 1rem;
     padding: 2rem 0 0.7rem;
     @include dividerLine;
-
+    
+    @include desktop{
+      padding-right:2rem ;
+    }
 
 
     &__profile-img{
