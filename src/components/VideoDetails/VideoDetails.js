@@ -25,4 +25,4 @@ const VideoDetails = ({selectedVideo}) => {
   )
 }
 
-export default VideoDetails
+export default VideoDetails;

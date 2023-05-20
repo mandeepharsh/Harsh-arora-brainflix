@@ -5,9 +5,9 @@ import VideoDetails from "../VideoDetails/VideoDetails";
 
 
 // Scss file
-import "./Comments.scss";
+import "./VideoReview.scss";
 
-const Comments = ({selectedVideo}) => {
+const VideoReview = ({selectedVideo}) => {
   return (
     <div className="reviews">
     <VideoDetails selectedVideo = {selectedVideo} />
@@ -27,4 +27,4 @@ const Comments = ({selectedVideo}) => {
   )
 }
 
-export default Comments
+export default VideoReview;
