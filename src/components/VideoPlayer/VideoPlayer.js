@@ -1,12 +1,12 @@
 import "./VideoPlayer.scss"
 
-const HeroVideo = ({selectedVideo}) => {
+const VideoPlayer = ({selectedVideo}) => {
   return (
-    <div className="hero" >
-    <video className="hero__videoPlayer" poster={selectedVideo.image} controls>
+    <div className="video" >
+    <video className="video__player" poster={selectedVideo.image} controls>
     </video>
     </div>
   )
 }
 
-export default HeroVideo
+export default VideoPlayer;

@@ -1,25 +1,27 @@
 @use  "../../styles/partials/mixins" as * ;
 @use "../../styles/partials/variables" as *;
 
-.hero{
+.video{
     
-    
+    width: 100%;
     background-color: $VideoComponenetColor;
 
-   
-
-    &__videoPlayer{
+    &__player{
+        object-fit: cover;
+        aspect-ratio: 16/9;
         width: 100%;
         display: block;
         margin: 0 auto;
-        
+
+         
         @include tablet{
-            width: 90%;
+            width: 100%;
+            padding: 0 2.25rem ;
         }
 
         @include desktop{
-            width: 63.75rem;
-
+            width: 59rem;
+            height: 36rem;
         }
     }
 }
