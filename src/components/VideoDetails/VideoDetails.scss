@@ -26,37 +26,44 @@
    }
    
    &__sub-stats{
-    margin-right: 7rem;
+    margin-right: 5rem;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex-direction: column;
     gap: 1rem;
     color: $secondaryTextColor;
       @include tablet{
+        gap: 2.5rem;
         flex-direction: row;
         margin: 0;
+        font-size: 1.2rem;
       }
    }
    
-
-
    &__tag{
      display: flex;
      gap: 0.7rem;
 
-     &--featured{
+     &--featured{  
+        font-size: 1.1rem;
         color: $primaryTextColor;
         font-weight: 700;
+
+        @include tablet{
+          font-size: 1.2rem;
+        }
      }
    }
 
    &__description{
     padding: 1.2rem 0 2rem ;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
     @include desktop{
       padding: 1.2rem 2rem 2rem 0 ;
     }
    }
-
-
 }
