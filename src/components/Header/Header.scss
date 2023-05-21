@@ -10,13 +10,13 @@
     @include tablet{
       flex-direction: row;
       justify-content: space-between;
-      margin: 2.25rem 1.5rem 1.5rem;
+      margin: 1.25rem 2.25rem 1.25rem;
     }
      
     @include desktop{
         width: 63.75rem;
         margin: 0 auto;
-        padding: 2.25rem 0 1.5rem;
+        padding: 1.5rem 0 1.5rem;
     }
    
     &__logo{
