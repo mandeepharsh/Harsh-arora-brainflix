@@ -14,11 +14,13 @@
   }
   
   &__count{
-    @include fontStyling(1.2rem,1.4rem,700)
+    @include fontStyling(1.05rem,1.4rem,700);
+    @include tablet{
+     font-size: 1.2rem;
+    }
   }
 
     &__comments{
-
         &__cards {
          @include tablet {
            width: 80%;

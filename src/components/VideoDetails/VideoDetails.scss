@@ -59,11 +59,12 @@
     padding: 1.2rem 0 2rem ;
     font-size: 1rem;
     @include tablet {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     @include desktop{
       padding: 1.2rem 2rem 2rem 0 ;
+      line-height: 1.6rem;
     }
    }
 }
