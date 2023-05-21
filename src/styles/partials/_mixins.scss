@@ -48,17 +48,26 @@
     background-image: $imgSrc;
     background-repeat: no-repeat;
     border: none;
+    height: 2.9rem;
     margin : 1rem 0;
-    padding: 1rem ;
+    padding: 0 1rem ;
     color: $white;
     background-position: left;
     background-origin: content-box;
     border-radius: .25rem;
+    font-size: .875rem;
 
     @include tablet{
-        width: 9.375rem;
+        width: 11rem;
         margin: 0;
-        height: 2.5rem;
+        height: 3rem;
         padding: .3125rem;
+        font-size: 1rem;
     }
+
+    &:hover{
+        background-color: $CtaHoverState;
+    }
+
+    
 }
