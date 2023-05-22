@@ -5,7 +5,7 @@ const VideoList = ({videos,chnageSelctedVideo}) => {
 
   return (
     <div className="video-list">
-     <h3 className="video-list__title">{"next videos".toUpperCase()}</h3>
+     <h2 className="video-list__title">next videos</h2>
 
     {videos.map((video)=>
         <VideoCard 

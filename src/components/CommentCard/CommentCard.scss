@@ -12,6 +12,7 @@
       padding: 2rem 0;
     }
     @include desktop{
+      gap: 2rem;
       padding: 2rem 2rem 2rem 1rem;
     }
   }
@@ -36,7 +37,7 @@
     width: 100%;
     @include tablet{
       gap: 1rem;
-    
+
     }
   }
 

@@ -4,12 +4,12 @@
 .reviews{
   margin: 1rem;
 
-
   @include tablet{
     margin: 2rem
   }
   @include desktop{
     margin: 0;
+    width: 84%;
     border-right: 1px solid $dividerLineColor;
   }
   

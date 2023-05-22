@@ -1,14 +1,18 @@
+@use "../../styles/partials/mixins" as *;
 .video-card{
     display: flex;
     gap: 1rem;
-
-
-
+    cursor: pointer;
+    
     &__thumbnail{
-        width: 9rem;
-        height: 6rem;
+        width: 8rem;
+        height: 5rem;
         flex: none;
         border-radius: .25rem;
+        @include tablet{
+            width: 9rem;
+            height: 5.5rem;
+        }
     }
 
     &__description{
@@ -19,7 +23,18 @@
     }
 
     &__title{
+        font-size: .95rem;
         margin: 0;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        width: 70%;
+        max-width: 17rem;
+        
+        @include desktop{
+            width: 100%;
+        }
     }
     
 }
