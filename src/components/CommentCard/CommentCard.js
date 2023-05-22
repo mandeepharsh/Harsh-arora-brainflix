@@ -1,7 +1,7 @@
 import "./CommentCard.scss";
 
 const CommentCard = ({name,date,comment}) => {
-  
+ 
   return (
     <div className="comment__card">
       <div className="comment__user-img" />

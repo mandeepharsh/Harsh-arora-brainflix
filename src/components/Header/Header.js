@@ -1,5 +1,5 @@
-import logo from "../../Assets/Logo/BrainFlix-logo.svg";
-import img from "../../Assets/Images/Mohan-muruge.jpg"
+import logo from "../../assets/Images/Logo/BrainFlix-logo.svg";
+import img from "../../assets/Images/Mohan-muruge.jpg"
 
 
 import './Header.scss';

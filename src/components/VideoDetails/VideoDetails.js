@@ -1,6 +1,6 @@
 // Importing icons
-import likeIcon  from "../../Assets/Icons/likes.svg";
-import viewsIcon  from "../../Assets/Icons/views.svg";
+import likeIcon  from "../../assets/Images/Icons/likes.svg";
+import viewsIcon  from "../../assets/Images/Icons/views.svg";
 
 // importing scss file 
 import "./VideoDetails.scss";

@@ -9,13 +9,6 @@
   font-family:AvenirNext, sans-serif;
 }
 
-.main{
-  @include desktop{
-    display: flex;
-    @include desktop-layout;
-  }
-}
-
 h1{
   font-size: 1.6rem;
   line-height: 2rem;
@@ -41,5 +34,12 @@ h3{
   @include tablet{
     font-size: .875rem;
     line-height: 1.375rem;
+  }
+}
+
+.content-container{
+  @include desktop{
+    display: flex;
+    @include desktop-layout;
   }
 }

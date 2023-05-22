@@ -81,7 +81,7 @@
 
 
     &__button{
-        @include button(url("../../Assets/Icons/add_comment.svg"));
+        @include button(url("../../assets/Images/Icons/add_comment.svg"));
 
         @include tablet{
          height: 3rem;

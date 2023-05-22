@@ -33,12 +33,12 @@ function App() {
     <>
     <Header/>
     <VideoPlayer selectedVideo = {selectedVideo}/>
-    <div className='main'>
+    <main className='content-container'>
     <VideoReview selectedVideo = {selectedVideo}/>
     <VideoList   videos ={filteredVideos}
                  chnageSelctedVideo = {chnageSelctedVideo}
     />
-    </div>
+    </main>
     </>
   );
 }

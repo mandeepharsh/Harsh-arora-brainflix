@@ -1,4 +1,4 @@
-import userImage from "../../Assets/Images/Mohan-muruge.jpg";
+import userImage from "../../assets/Images/Mohan-muruge.jpg";
 
 
 import "./CommentInput.scss"
