@@ -17,7 +17,7 @@ function App() {
   
   const [selectedVideo , setSelectedVideo ] = useState(videoDetails[0])
     
-  const chnageSelctedVideo = (id)  => {
+  const chnageSelectedVideo = (id)  => {
    const newSelection =   videoDetails.find((video) =>
        video.id === id 
      )
@@ -36,7 +36,7 @@ function App() {
     <main className='content-container'>
     <VideoReview selectedVideo = {selectedVideo}/>
     <VideoList   videos ={filteredVideos}
-                 chnageSelctedVideo = {chnageSelctedVideo}
+                 chnageSelectedVideo = {chnageSelectedVideo}
     />
     </main>
     </>

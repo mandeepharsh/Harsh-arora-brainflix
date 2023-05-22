@@ -1,6 +1,6 @@
 import VideoCard from "../VideoCard/VideoCard";
 import "./VideoList.scss"
-const VideoList = ({videos,chnageSelctedVideo}) => {
+const VideoList = ({videos,chnageSelectedVideo}) => {
   
 
   return (
@@ -14,7 +14,7 @@ const VideoList = ({videos,chnageSelctedVideo}) => {
                    title ={video.title} 
                    channel = {video.channel}
                    image = {video.image}
-                   chnageSelctedVideo= {chnageSelctedVideo}/>
+                   chnageSelctedVideo= {chnageSelectedVideo}/>
     )}
     </div>
  
