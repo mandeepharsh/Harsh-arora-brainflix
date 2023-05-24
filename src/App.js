@@ -3,10 +3,7 @@ import { useState } from 'react';
 import './App.scss';
 
 // Components
-import Header from './components/Header/Header';
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import VideoList from './components/VideoList/VideoList';
-import VideoReview from './components/VideoReview/VideoReview';
+import HomePage from './pages/HomePage/HomePage';
 
 // Importing Json Files
 import videos from "./data/video.json";
@@ -31,15 +28,11 @@ function App() {
 
   return (
     <>
-    <Header/>
-    <VideoPlayer selectedVideo = {selectedVideo}/>
-    <main className='content-container'>
-    <VideoReview selectedVideo = {selectedVideo}/>
-    <VideoList   videos ={filteredVideos}
-                 chnageSelectedVideo = {chnageSelectedVideo}
+    <HomePage chnageSelectedVideo={chnageSelectedVideo} 
+              filteredVideos = {filteredVideos}
+              selectedVideo = {selectedVideo}
     />
-    </main>
-    </>
+   </>
   );
 }
 
