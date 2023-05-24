@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage/HomePage';
 // Importing Json Files
 import videos from "./data/video.json";
 import videoDetails from "./data/video-details.json";
+import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               filteredVideos = {filteredVideos}
               selectedVideo = {selectedVideo}
     />
+    <VideoUploadPage/>
    </>
   );
 }
