@@ -1,10 +1,8 @@
-import Header from "../../components/Header/Header"
 
 
 const VideoUploadPage = () => {
   return (
     <>
-      <Header/>
       <div>
         <h2>Upload Video</h2>
         <div>
