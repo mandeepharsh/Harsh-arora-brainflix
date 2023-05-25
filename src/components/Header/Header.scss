@@ -76,4 +76,9 @@
         @include button( url(../../assets/Images/Icons/upload.svg));
         margin-top: 0;
     }
+
+    &__link{
+        text-decoration: none;
+        color: $white;
+    }
 }
