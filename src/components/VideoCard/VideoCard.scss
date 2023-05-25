@@ -1,8 +1,11 @@
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 .video-card{
     display: flex;
     gap: 1rem;
     cursor: pointer;
+    text-decoration: none;
+    color: $primaryTextColor;
     
     &__thumbnail{
         width: 8rem;

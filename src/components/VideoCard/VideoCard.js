@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
 import "./VideoCard.scss";
 
 
 
-const VideoCard = ({image,title,channel,id,chnageSelctedVideo}) => {
+const VideoCard = ({image,title,channel,id}) => {
   return (
-    <div onClick={() => chnageSelctedVideo(id)} className="video-card">
+    <Link to={`/${id}`} className="video-card">
       <img className="video-card__thumbnail" alt={title} src={image}/>
       <div className="video-card__description">
       <h3 className="video-card__title">{title}</h3>
       <span className="video-card__channel">{channel}</span>
       </div>
-    </div>
+    </Link>
   )
 }
 export default VideoCard;
