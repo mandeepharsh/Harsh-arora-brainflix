@@ -1,26 +1,34 @@
+import "./VideoUploadPage.scss"
+import thumbnail from "../../assets/Images/Upload-video-preview.jpg"
+
 
 
 const VideoUploadPage = () => {
   return (
     <>
-      <div>
-        <h2>Upload Video</h2>
-        <div>
-            <h3>video thumbnail</h3>
-            <img/>
+      <div className="upload">
+        <h1 className="upload__title">Upload Video</h1>
+        <div className="upload__main">
+        <div className="upload__image-container">
+            <h3 className="upload__image-title">video thumbnail</h3>
+            <img src={thumbnail} className="upload__image" alt="upload thumbnail"/>
         </div>
-        <form>
-            <label>
+        <form className="upload__form">
+            <label className="upload__label">
                  Title your video
-                <input/>
+                <input placeholder="Add a title to your video" className="upload__input"/>
             </label>
-            <label>
+            <label className="upload__label upload__label--divider">
                  Add a video description
-                <input/>
+                <textarea placeholder="Add a description to your video" className="upload__input upload__input--area"/>
             </label>
-            <button>publish</button>
-            <button>cancel</button>
+            
         </form>
+        </div>
+        <div className="upload__button-container">
+            <button className="upload__cancel-btn">cancel</button>
+            <button  className="upload__publish-btn">publish</button>
+            </div>
       </div>
     </>
   )
