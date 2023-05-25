@@ -10,15 +10,15 @@ const Header = () => {
   return (
     <nav className = "nav-bar">
       <Link to="/"> <img className = "nav-bar__logo" src ={logo} alt = "Logo"/></Link>
-      <form className = "nav-bar__form-field "  >
+      <div  className = "nav-bar__form-field "  >
       <input placeholder="Search" name="search" className = "nav-bar__search-bar" />
       <img className ="nav-bar__profile-img" alt ="proflie " src={img}/>
-      <button className="nav-bar__button">
        <Link className="nav-bar__link" to="/upload">
+      <button className="nav-bar__button">
       upload
-      </Link>
       </button>
-      </form>
+      </Link>
+      </div>
     </nav>
   )
 }
