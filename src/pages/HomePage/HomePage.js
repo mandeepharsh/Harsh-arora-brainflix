@@ -10,6 +10,7 @@ import { API_KEY,URL } from "../../utils/api";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import VideoReview from "../../components/VideoReview/VideoReview";
 import VideoList from "../../components/VideoList/VideoList";
+import Loading from "../../components/Loading/Loading";
 
 const HomePage = () => {
   const {id} = useParams();
@@ -42,7 +43,7 @@ const HomePage = () => {
   },[displayVideoId])
 
   if(isLoading){
-    return <div>loading...</div>
+    return <Loading/>
   }
 
   return (
