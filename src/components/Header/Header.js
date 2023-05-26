@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/Images/Logo/BrainFlix-logo.svg";
-import img from "../../assets/Images/Mohan-muruge.jpg"
+import logo from "../../assets/images/logo/BrainFlix-logo.svg";
+import img from "../../assets/images/Mohan-muruge.jpg"
 
 
 import './Header.scss';

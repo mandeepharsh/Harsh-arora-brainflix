@@ -39,7 +39,7 @@
     }
 
     &__search-bar{
-     background-image: url(../../assets/Images/Icons/search.svg);
+     background-image: url(../../assets/images/icons/search.svg);
      background-repeat: no-repeat;
      padding: .75rem 2.25rem ;
      border: .0625rem solid $dividerLineColor;
@@ -73,7 +73,7 @@
     }
 
     &__button{
-        @include button( url(../../assets/Images/Icons/upload.svg));
+        @include button( url(../../assets/images/icons/upload.svg));
         margin-top: 0;
     }
 

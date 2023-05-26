@@ -1,5 +1,5 @@
 import "./VideoUploadPage.scss"
-import thumbnail from "../../assets/Images/Upload-video-preview.jpg"
+import thumbnail from "../../assets/images/Upload-video-preview.jpg"
 
 
 

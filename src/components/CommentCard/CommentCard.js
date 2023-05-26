@@ -2,7 +2,6 @@ import "./CommentCard.scss";
 import { timeStamp } from "../../utils/timestamp";
 
 const CommentCard = ({name,date,comment}) => {
- 
 const displayDate =  timeStamp(date)
 
   

@@ -126,7 +126,7 @@
     }
 
     &__publish-btn{
-        @include button(url("../../assets/Images/Icons/publish.svg"))
+        @include button(url("../../assets/images/icons/publish.svg"))
     }
     &__cancel-btn{
         @include button(null);
