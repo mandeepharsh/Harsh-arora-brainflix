@@ -39,7 +39,7 @@ const HomePage = () => {
       setSelectedVideo(res.data)
       setIsLoading(false)
     })
-
+   window.scrollTo({ top: 0, behavior: 'smooth' })
   },[displayVideoId])
 
   if(isLoading){
