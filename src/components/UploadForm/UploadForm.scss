@@ -1,0 +1,149 @@
+@use '../../styles/partials/mixins' as *;
+@use "../../styles/partials/variables" as *;
+
+.upload{
+   
+    padding: 0 1rem;
+    @include tablet{
+        padding: 0;
+    }
+ 
+    @include desktop{
+        @include desktop-layout
+    }
+   
+    &__title{
+        padding : 1.6rem 0;
+        border-bottom: .100rem solid $dividerLineColor;
+    }
+    
+    &__main{
+     
+        @include desktop{
+            display: flex;
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: .125rem solid $dividerLineColor;
+        }
+    }
+
+    &__image-container{
+        @include tablet{
+            margin-top: 2rem;
+        }
+    }
+
+
+    &__image-title{
+        color: $secondaryTextColor;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        line-height: 2rem;
+        @include tablet{
+        font-size: 1rem;
+        }
+    }
+    &__image{
+       width: 100%;
+       border-radius: .25rem;
+
+       @include tablet{
+        height: 16rem;
+        width: 26.5rem;
+       }
+       @include desktop{
+        height: 14rem;
+        width: 25.5rem;
+       }
+    }   
+   
+    &__form{
+       display: flex;
+       flex-direction: column;
+       margin: 0.9rem 0;
+       gap: 1rem;
+      @include tablet{
+        padding-bottom: 2rem;  
+      }
+      @include desktop{
+        flex: auto;
+        height: 14rem;
+        align-self: center;
+        margin: 1rem 0;
+        gap: 2rem;
+      }
+    }
+
+   
+    &__label{
+       font-size: 0.9rem;
+       display: flex;
+       flex-direction: column;
+       color: $secondaryTextColor;
+       line-height: 1.8rem;
+       text-transform: uppercase;
+       
+    }
+    
+    
+    &__input{
+        height: 3rem;
+        background-color: $formFieldColor;
+        border: 1px solid $dividerLineColor;
+        border-radius: .25rem;
+        font-size: 0.9rem;
+        padding: 0 1rem;
+     
+      &::placeholder{
+        color: $primaryTextColor;
+        
+      }  
+       
+      &--area{
+        height: 6.25rem;
+        padding-top: 0.8rem;
+        resize: vertical;
+        @include desktop{
+            height: 7.1rem;
+        }
+       } 
+    }
+    
+    &__divider-line{
+        display: none;
+        @include tablet{
+            display: block;
+            margin-top: 1rem;
+            border: none;
+            border-top: .125rem solid $dividerLineColor;
+        }
+    
+        @include desktop{
+            display: none;
+        }
+    }
+
+    &__button-container{
+        display: flex;
+        flex-direction: column-reverse;
+        @include tablet{
+            flex-direction: row;
+            justify-content: end;
+            gap: 2rem;
+            margin-top: 1.2rem
+        }
+        @include desktop{
+            margin-top: 2rem
+        }
+    }
+
+    &__publish-btn{
+        @include button(url("../../assets/images/icons/publish.svg"))
+    }
+    &__cancel-btn{
+        @include button(null);
+        background-color: $white;
+        color: $PrimaryCtaColor;
+    }
+ 
+}
