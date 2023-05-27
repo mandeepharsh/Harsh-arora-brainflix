@@ -144,6 +144,10 @@
         @include button(null);
         background-color: $white;
         color: $PrimaryCtaColor;
+
+        &:hover{
+            color: $white;
+        }
     }
  
 }
