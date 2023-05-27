@@ -9,11 +9,12 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
-  }
+ 
   
-  .overlay-content {
+  &__content {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
   }
+}

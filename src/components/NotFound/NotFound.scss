@@ -1,0 +1,39 @@
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .not-found {
+    text-align: center;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fade-in 0.5s ease-in-out forwards;
+  
+    &__title {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #007bff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  
+    &__description {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #333;
+    }
+  
+    &__link {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+  
