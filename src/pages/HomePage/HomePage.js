@@ -21,10 +21,15 @@ const HomePage = () => {
 
   const defaultVideoId = videos.length > 0 ? videos[0].id : null;
   const displayVideoId = id || defaultVideoId;
+
+  // Axios request 
   useEffect(() =>{
     axios
     .get(URL + "/videos" + API_KEY)
     .then((res) => setVideos(res.data))
+    .catch((err)=>{
+      console.log(err)
+    })
   },[])
 
   // Filter the array to remove the video which has been selected
@@ -38,11 +43,13 @@ const HomePage = () => {
     .then((res) =>{
       setSelectedVideo(res.data)
       setIsLoading(false)
+    }).catch((err)=>{
+      console.log(err)
     })
    window.scrollTo({ top: 0, behavior: 'smooth' })
   },[displayVideoId])
 
-  if(isLoading){
+  if(!!isLoading){
     return <Loading/>
   }
 
