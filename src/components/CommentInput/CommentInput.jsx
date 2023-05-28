@@ -7,7 +7,9 @@ import "./CommentInput.scss"
 const CommentInput = ({commentAddHandler}) => {
   const onSumbitHandler =(e) =>{
     e.preventDefault();
-
+    if(!e.target.comment.value.trim()){
+      return;
+    }
     const currentComment = {
       name : "amrinder gill",
      comment : e.target.comment.value
