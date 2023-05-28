@@ -89,15 +89,18 @@
     &__input{
         height: 3rem;
         background-color: $formFieldColor;
-        border: 1px solid $dividerLineColor;
+        border: .0625rem solid $dividerLineColor;
         border-radius: .25rem;
         font-size: 0.9rem;
         padding: 0 1rem;
      
       &::placeholder{
         color: $primaryTextColor;
-        
       }  
+
+     &--invalid{
+        border-color: $invalid;
+     }
        
       &--area{
         height: 6.25rem;
