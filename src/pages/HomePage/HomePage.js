@@ -14,14 +14,14 @@ import Loading from "../../components/Loading/Loading";
 
 const HomePage = () => {
   const {id} = useParams();
-
+  
   const [videos, setVideos] = useState([]); 
   const [selectedVideo,setSelectedVideo] = useState({});
-  const [isLoading,setIsLoading] = useState(true)
+  const [isLoading,setIsLoading] = useState(true);
+  const [triggerReq,setTriggerReq] = useState(false);
 
   const defaultVideoId = videos.length > 0 ? videos[0].id : null;
   const displayVideoId = id || defaultVideoId;
-
   // Axios request 
   useEffect(() =>{
     axios
@@ -37,17 +37,26 @@ const HomePage = () => {
       video.id !== displayVideoId
   )
 
+  //on click handler for delete functionality of cimment section 
+  const commentDeleteHandler = (commentId) =>{
+    axios.delete(URL + "/videos/" + displayVideoId + "/comments/" + commentId + API_KEY)
+    .then((res) => setTriggerReq(true)  ) 
+    .catch((err)=>console.log(err))
+  } 
+
+
   useEffect(() =>{
     if (!displayVideoId) return;
     axios.get(URL +"/videos/" + displayVideoId + API_KEY)
     .then((res) =>{
       setSelectedVideo(res.data)
       setIsLoading(false)
+      setTriggerReq(false)
     }).catch((err)=>{
       console.log(err)
     })
    window.scrollTo({ top: 0, behavior: 'smooth' })
-  },[displayVideoId])
+  },[displayVideoId,triggerReq])
 
   if(!!isLoading){
     return <Loading/>
@@ -57,7 +66,9 @@ const HomePage = () => {
     <>
     <VideoPlayer selectedVideo = {selectedVideo}/>
     <main className='content-container'>
-    <VideoReview selectedVideo = {selectedVideo}/>
+    <VideoReview selectedVideo = {selectedVideo}
+                 commentDeleteHandler ={commentDeleteHandler}
+    />
     <VideoList   videos ={filteredVideos}
     />
     </main>
