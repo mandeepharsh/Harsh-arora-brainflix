@@ -44,6 +44,13 @@ const HomePage = () => {
     .catch((err)=>console.log(err))
   } 
 
+ 
+  const commentAddHandler = (comment) =>{
+    axios.post(URL + "/videos/" + displayVideoId + "/comments" + API_KEY,comment)
+    .then((res) => setTriggerReq(true))
+    .catch((err) => console.log(err))
+  }
+
 
   useEffect(() =>{
     if (!displayVideoId) return;
@@ -55,7 +62,6 @@ const HomePage = () => {
     }).catch((err)=>{
       console.log(err)
     })
-   window.scrollTo({ top: 0, behavior: 'smooth' })
   },[displayVideoId,triggerReq])
 
   if(!!isLoading){
@@ -68,6 +74,7 @@ const HomePage = () => {
     <main className='content-container'>
     <VideoReview selectedVideo = {selectedVideo}
                  commentDeleteHandler ={commentDeleteHandler}
+                 commentAddHandler ={commentAddHandler}
     />
     <VideoList   videos ={filteredVideos}
     />

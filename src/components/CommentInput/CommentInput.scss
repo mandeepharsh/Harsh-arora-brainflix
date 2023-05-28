@@ -64,6 +64,7 @@
         border: 0.0625rem solid $dividerLineColor;
         font-family: AvenirNext;
         background-color: $formFieldColor;
+        font-size: 1rem;
         &::placeholder {
           color: $primaryTextColor;
           font-size: 1rem;

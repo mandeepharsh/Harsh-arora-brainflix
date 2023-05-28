@@ -1,5 +1,5 @@
 import "./CommentCard.scss";
-import deleteIcon from "../../assets/images/icons/likes.svg"
+import deleteIcon from "../../assets/images/icons/icon-delete.svg"
 import { timeStamp } from "../../utils/timestamp";
 
 const CommentCard = ({name,date,comment,commentDeleteHandler,id}) => {
@@ -13,7 +13,7 @@ const displayDate =  timeStamp(date)
         <h2 className="comment__name">{name}</h2>
         <span className="comment__date">{displayDate}</span>
         <p className="comment__review">{comment}</p>
-        <img onClick={() =>commentDeleteHandler(id)} src={deleteIcon}/>
+        <img className="comment__delete-icon" onClick={() =>commentDeleteHandler(id)} src={deleteIcon}/>
       </div>    
     </div>
   )
