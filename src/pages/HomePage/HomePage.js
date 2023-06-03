@@ -26,7 +26,7 @@ const HomePage = () => {
   useEffect(() =>{
     axios
     .get(URL + "/videos" + API_KEY)
-    .then((res) => setVideos(res.data))
+    .then((response) => setVideos(response.data))
     .catch((err)=>{
       console.log(err)
     })
