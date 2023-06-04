@@ -4,7 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 // API
-import { API_KEY,URL } from "../../utils/api";
+import { URL } from "../../utils/api";
 
 // components
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
@@ -25,7 +25,7 @@ const HomePage = () => {
   // Axios request 
   useEffect(() =>{
     axios
-    .get(URL + "/videos" + API_KEY)
+    .get(URL + "/videos" )
     .then((response) => setVideos(response.data))
     .catch((err)=>{
       console.log(err)
@@ -39,14 +39,14 @@ const HomePage = () => {
 
   //on click handler for delete functionality of cimment section 
   const commentDeleteHandler = (commentId) =>{
-    axios.delete(URL + "/videos/" + displayVideoId + "/comments/" + commentId + API_KEY)
+    axios.delete(URL + "/videos/" + displayVideoId + "/comments/" + commentId )
     .then((res) => setTriggerReq(true)  ) 
     .catch((err)=>console.log(err))
   } 
 
  
   const commentAddHandler = (comment) =>{
-    axios.post(URL + "/videos/" + displayVideoId + "/comments" + API_KEY,comment)
+    axios.post(URL + "/videos/" + displayVideoId + "/comments" ,comment)
     .then((res) => setTriggerReq(true))
     .catch((err) => console.log(err))
   }
@@ -54,7 +54,7 @@ const HomePage = () => {
 
   useEffect(() =>{
     if (!displayVideoId) return;
-    axios.get(URL +"/videos/" + displayVideoId + API_KEY)
+    axios.get(URL +"/videos/" + displayVideoId )
     .then((res) =>{
       setSelectedVideo(res.data)
       setIsLoading(false)

@@ -12,7 +12,7 @@ const VideoDetails = ({selectedVideo}) => {
       <h1 className="video-details__title">{title}</h1>
       <div className="video-details__stats">
         <div className="video-details__sub-stats">
-            <span className="video-details__tag videoDetails__tag--featured">{channel}</span>
+            <span className="video-details__tag video-details__tag--featured">By {channel}</span>
             <span className="video-details__tag">{new Date(timestamp).toLocaleDateString()}</span>
         </div>
         <div className="video-details__sub-stats">

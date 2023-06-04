@@ -5,7 +5,7 @@ import axios from "axios";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import Overlay from "../Overlay/Overlay"
 import "./UploadForm.scss"
-import { API_KEY,URL } from "../../utils/api";
+import { URL } from "../../utils/api";
 
 const UploadForm = () => {
     const[overlay,setOverlay] = useState(false);
@@ -50,9 +50,12 @@ const isDescriptionValid = () => {
       setFormSumbited(true)
       if(isFormValid()){
       
-        axios.post(URL + "/videos" + API_KEY,{
+        axios.post(URL + "/videos" ,{
           title : title,
           description : description
+        })
+        .catch((err)=>{
+          console.log(err);
         })
          setOverlay(true)
          setTimeout(()=> navigateToHome(),2000);
