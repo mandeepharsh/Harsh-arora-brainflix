@@ -13,7 +13,7 @@ const displayDate =  timeStamp(date)
         <h2 className="comment__name">{name}</h2>
         <span className="comment__date">{displayDate}</span>
         <p className="comment__review">{comment}</p>
-        <img className="comment__delete-icon" onClick={() =>commentDeleteHandler(id)} src={deleteIcon}/>
+        <img className="comment__delete-icon" onClick={() =>commentDeleteHandler(id)} alt="delete-icon" src={deleteIcon}/>
       </div>    
     </div>
   )

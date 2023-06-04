@@ -59,6 +59,7 @@ const HomePage = () => {
       setSelectedVideo(res.data)
       setIsLoading(false)
       setTriggerReq(false)
+      window.scroll({top : 0,behavior :"smooth"})
     }).catch((err)=>{
       console.log(err)
     })
